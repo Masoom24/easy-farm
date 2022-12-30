@@ -1,5 +1,6 @@
 import Header from './header/Header';
 import Home from './Home/Home'
+import ViewProducts from './viewProduct/ViewProducts';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,12 +9,17 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <div>This is the main landing page!!</div>,
   },
   {
     path: "/home",
     element: <Home />,
-  }
+  },
+  {
+    path: "/myProduct",
+    element: <ViewProducts />,
+  },
+
 ]);
 function App() {
   return (
