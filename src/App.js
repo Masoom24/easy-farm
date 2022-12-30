@@ -1,6 +1,7 @@
-import Header from './header/Header';
-import Home from './Home/Home'
-import ViewProducts from './viewProduct/ViewProducts';
+import Header from './components/header';
+import Home from './pages/home'
+import ViewProducts from './pages/viewProduct';
+import NotFound from './pages/404';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
     path: "/myProduct",
     element: <ViewProducts />,
   },
-
+  {
+    path: "/*",
+    element: <NotFound />,
+  },
 ]);
 function App() {
   return (
