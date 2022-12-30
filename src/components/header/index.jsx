@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import homesvg from '../asset/Icons/homesvg.svg';
-import profilePNG from '../asset/Icons/profile.png'
+import homesvg from '../../asset/Icons/homesvg.svg';
+import profilePNG from '../../asset/Icons/profile.png'
 
 const Header = () => {
     return (
