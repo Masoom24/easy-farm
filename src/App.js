@@ -1,5 +1,6 @@
 import Header from './header/Header';
 import Home from './Home/Home'
+import Auth from './Login/Auth'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/login",
+    element: <Auth />,
   }
 ]);
 function App() {
