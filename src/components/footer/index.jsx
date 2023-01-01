@@ -27,7 +27,7 @@ const Footer = () => {
               </span>
             </div>
             <div className='border flex items-center border-violet-900 my-5 mx-2'>
-              <a href='tel:+919589518638' className='cursor-pointer' ><Chip icon={<MdPhone />} label="Call me" /></a>
+              <a href='tel:+919589518638' className='cursor-pointer ' ><Chip icon={<MdPhone />} label="Call me" /></a>
             </div>
           </div>
           <div className='border text-center border-yellow-500'>

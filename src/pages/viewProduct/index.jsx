@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { useState } from 'react';
+import Button from '@mui/material/Button';
 const ViewProducts = () => {
     const data = [
         {
@@ -56,7 +57,22 @@ const ViewProducts = () => {
             productPrice: "productPrice",
             productDescription: "productDescription"
         },
+        {
+            productName: "Sample",
+            productImage: "sampleImage",
+            productPrice: "productPrice",
+            productDescription: "productDescription"
+        }
     ]
+    const [currPage, setCurrPage] = useState(1);
+    const nextPage = () => {
+        setCurrPage(currPage + 1)
+    }
+    const prePage = () => {
+        if (currPage > 1) {
+            setCurrPage(currPage - 1)
+        }
+    }
     return (
         <>
             <div>
@@ -76,19 +92,28 @@ const ViewProducts = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((value, index) => (<tr>
-                            <td className='border border-slate-600'>{index + 1}</td>
-                            <td className='border border-slate-600'>{value.productImage}</td>
-                            <td className='border border-slate-600'>{value.productName}</td>
-                            <td className='border border-slate-600'>{value.productPrice}</td>
-                            <td className='border border-slate-600'>{value.productDescription}</td>
-                            <td className='border border-slate-600'><button className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Edit</button></td>
-                            <td className='border border-slate-600'><button className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Delete</button></td>
-                        </tr>))}
+                        {data.map((value, index) => (
+                            <tr>
+                                <td className='border border-slate-600'>{index + 1+((currPage-1)*10)}</td>
+                                <td className='border border-slate-600'>{value.productImage}</td>
+                                <td className='border border-slate-600'>{value.productName}</td>
+                                <td className='border border-slate-600'>{value.productPrice}</td>
+                                <td className='border border-slate-600'>{value.productDescription}</td>
+                                <td className='border border-slate-600'><button className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Edit</button></td>
+                                <td className='border border-slate-600'><button className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Delete</button></td>
+                            </tr>))}
                     </tbody>
 
                 </table>
             </div>
+
+
+            {/* <button disabled={true} onClick={prePage}>Previous</button>{currPage}
+            <button onClick={nextPage}>Next</button> */}
+
+            <Button disabled={currPage <= 1} onClick={prePage} variant="contained">Previous</Button>{currPage}
+            <Button onClick={nextPage} variant="contained">Next</Button>
+            {/* onClick={()=>nextPage()} */}
 
         </>
     )
