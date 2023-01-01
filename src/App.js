@@ -2,6 +2,7 @@ import Header from './components/header';
 import Home from './pages/home'
 import ViewProducts from './pages/viewProduct';
 import NotFound from './pages/404';
+import Footer from './components/footer';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,6 +33,7 @@ function App() {
         <Header />
       </BrowserRouter>
       <RouterProvider router={router} />
+      <Footer />
       
   </div>
   
