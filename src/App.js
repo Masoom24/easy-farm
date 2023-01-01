@@ -3,6 +3,9 @@ import Home from './pages/home'
 import ViewProducts from './pages/viewProduct';
 import NotFound from './pages/404';
 import Footer from './components/footer';
+import Login from './pages/login/Login'
+import Signup from './pages/login/Signup'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/myProduct",
     element: <ViewProducts />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
   },
   {
     path: "/*",
