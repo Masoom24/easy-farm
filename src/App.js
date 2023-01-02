@@ -5,6 +5,7 @@ import NotFound from './pages/404';
 import Footer from './components/footer';
 import Login from './pages/login/Login'
 import Signup from './pages/login/Signup'
+import AddProduct from './pages/addproduct'
 
 import {
   createBrowserRouter,
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/addproduct",
+    element: <AddProduct />,
   },
   {
     path: "/*",
