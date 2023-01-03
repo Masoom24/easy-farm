@@ -15,7 +15,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>This is the New branch landing page!!</div>,
+    element: <div>This is the Another New branch landing page!!</div>,
   },
   {
     path: "/home",
