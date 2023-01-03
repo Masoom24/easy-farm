@@ -1,13 +1,18 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+export const Colors = styled.div`
+    background : linear-gradient(
+        to left,
+        red,
+        yellow,
+        orange
+    )
+`
 const Home = () => {
-    const navigate = useNavigate();
-    const changeHTML = () =>{
-        navigate("/");
-    }
+
   return (
     <>
-        <button onClick={changeHTML}>Click</button>
+      <div>This is a home page</div>
     </>
   )
 }
