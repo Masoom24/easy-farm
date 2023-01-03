@@ -15,7 +15,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>This is the main landing page!!</div>,
+    element: <div>This is the New landing page!!</div>,
   },
   {
     path: "/home",
