@@ -1,0 +1,1 @@
+export const currValue = (state) => state.auth.value ;
