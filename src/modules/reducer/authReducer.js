@@ -1,7 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    value: 0,
+    isLoading: false,
+    isAuth : false ,
+    userData : {
+        "profile": "",
+        "isEmailVerified": false,
+        "name": "Ritik 1",
+        "email": "ritik1@gmail.com",
+        "role": "seller",
+        "id": "63afe5d556a4050008e89f33"
+    },
+    value: 0
 }
 
 const authSlice = createSlice({

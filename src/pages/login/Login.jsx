@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const login = () => {
+const Login = () => {
     const divStyles = {
         boxShadow: '1px 2px 5px #1A237E',
         margin: 'auto',
@@ -41,4 +41,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login
