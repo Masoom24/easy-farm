@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 
 const AuthRoute = ({ children }) => {
     const isAuth = useSelector(isUserAuth);
-    return isAuth ? <Redirect to='/home' /> : children ;
+    return isAuth ? <Redirect to='/home' /> : children;
 }
 
 export default AuthRoute;

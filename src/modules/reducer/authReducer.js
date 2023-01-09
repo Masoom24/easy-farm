@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     isLoading: false,
-    isAuth : false ,
+    isAuth : true ,
     userData : {
         "profile": "",
         "isEmailVerified": false,
@@ -36,7 +36,7 @@ const authSlice = createSlice({
 //         increment : ksuuhfh
 //     }
 // }
-//!Exporting ACTIONS
+//!  Exporting ACTIONS
 export const { increment, decrement } = authSlice.actions;
 
 export default authSlice.reducer;
