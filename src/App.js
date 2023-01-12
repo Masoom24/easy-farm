@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
 
-
 function App() {
   return (
     <div>
