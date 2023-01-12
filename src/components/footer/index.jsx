@@ -52,12 +52,14 @@ const Footer = () => {
               <a href='https://twitter.com/i/flow/signup'><FaTwitterSquare size={30} /></a>
             </div>
             <div>
-              <div className='justify-center items-center mb-6 '>
-                <h4>Feel free to subscribe. We won't send spams!!</h4><br/>
-                <input placeholder="Your Email here..." className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" name="email" id="footerEmail" />
-                <Button variant="contained" endIcon={<SendIcon />} style={{backgroundColor:"white",borderRadius:"12px", color:"black"}}>
-                  Subscribe
-                </Button>
+              <div className='mb-6 '>
+                <h4>Feel free to subscribe. We won't send spams!!</h4><br />
+                <div className='flex items-center '>
+                  <input placeholder="Your Email here..." className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" name="email" id="footerEmail" />
+                  <Button variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "white", borderRadius: "12px", color: "black" }}>
+                    Subscribe
+                  </Button>
+                </div>
               </div>
 
             </div>
