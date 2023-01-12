@@ -10,6 +10,7 @@ export const Colors = styled.div`
     )
 `
 const Home = () => {
+  
 
   return (
     <>

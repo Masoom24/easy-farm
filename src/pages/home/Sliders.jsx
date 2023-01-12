@@ -25,6 +25,8 @@ const Sliders = () => {
                         <img
                             className="d-block w-100"
                             src={slider2}
+                            alt="First slide"
+
                         />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
@@ -35,6 +37,8 @@ const Sliders = () => {
                         <img
                             className="d-block w-100"
                             src={slider3}
+                            alt="First slide"
+
                         />
                         <Carousel.Caption>
                             <h3>Third slide label</h3>
