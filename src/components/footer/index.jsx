@@ -19,7 +19,7 @@ const Footer = () => {
 
 
     // <div style={divStyles} className=" mx-auto py-16 px-4 grid lg:grid-cols-1 gap-8 focus:outline-none text-white bg-gradient-to-r from-purple-400 to cyan-500">
-    <div className=" mx-auto py-16 px-4 grid lg:grid-cols-1 gap-8 focus:outline-none text-black bg-white">
+    <div className=" mx-auto pt-16 px-4 grid lg:grid-cols-1 gap-8 focus:outline-none text-black bg-white">
       <div >
         <h1 style={{ color: "cyan" }} className="w-full text-3xl font-bold text-[#00df9a]"><img className="w-48" src={logo} alt="" /></h1>
         <p className="py-4">This is website for connecting buyers and sellers of agriculture related products.</p>

@@ -8,7 +8,7 @@ const NotFound = () => {
       <section className="page_404 bg-no-repeat	">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 ">
+            <div className="col-sm-12 flex justify-center">
               <div className="col-sm-10 col-sm-offset-1 text-center">
                 <div className="four_zero_four_bg">
                   <h1 className="text-center ">404</h1>
@@ -21,9 +21,9 @@ const NotFound = () => {
                     Look like you're lost
                   </h3>
 
-                  <p>the page you are looking for not avaible!</p>
+                  <p>The page you are looking for is not avaible!</p>
 
-                  <a href="/home" className="link_404">Go to Home</a>
+                  <a href="/home" className="link_404 no-underline">Go to Home</a>
                 </div>
               </div>
             </div>
