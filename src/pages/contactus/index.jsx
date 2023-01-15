@@ -4,11 +4,11 @@ import "./contactstyle.css"
  const ContactUs = () =>{
   return (
   
-    <div className="container">
+    <div className="container1">
       
       <form>
-        <h1><center>--------CONTACT US----------</center></h1>
-        <br /><br />
+        <h1><center>----------CONTACT US----------</center></h1>
+        <br /><br /><br />
         <input type="text" id="firstName" placeholder="First Name" required />
         <input type="text" id="lastName" placeholder="Last Name" required />
         <input type="email" id="email" placeholder="Email" required /> 
