@@ -6,9 +6,13 @@ import Footer from './components/footer';
 import Login from './pages/login/Login'
 import Signup from './pages/login/Signup'
 import AddProduct from './pages/addproduct';
+//import ContactUs from './pages/contactus'
+//import AboutUs from './pages/aboutus'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
+import AboutUs from './pages/aboutus/index';
+import ContactUs from './pages/contactus/index';
 
 function App() {
   return (
@@ -24,8 +28,11 @@ function App() {
           </Route>
           <Route exact path='/ViewProducts'><PrivateRoute><ViewProducts /></PrivateRoute></Route>
           <Route exact path='/AddProduct'><PrivateRoute><AddProduct /></PrivateRoute></Route>
+          
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
+          <Route exact path='/aboutus'><AboutUs/></Route>
+          <Route exact path='/contactus'><ContactUs /></Route>
           <Route exact path='/*'><NotFound /></Route>
         </Switch>
         <Footer />
