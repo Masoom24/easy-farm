@@ -7,7 +7,7 @@ import "./contactstyle.css"
     <div className="container">
       
       <form>
-        <h1><center>------------------------------CONTACT US--------------------------------</center></h1>
+        <h1><center>--------CONTACT US----------</center></h1>
         <br /><br />
         <input type="text" id="firstName" placeholder="First Name" required />
         <input type="text" id="lastName" placeholder="Last Name" required />
