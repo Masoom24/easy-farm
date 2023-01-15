@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import Sliders from "./Sliders";
+import Sliders from "../../components/slider";
 export const Colors = styled.div`
     background : linear-gradient(
         to left,
