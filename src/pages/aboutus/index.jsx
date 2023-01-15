@@ -10,7 +10,7 @@ const AboutUs = () =>{
             We're out on our own journeys to maximise - be the best at what we 
             choose and care about the most - whether it be our impact, voice, potential, ideas, 
             influence, well-being or more. Because when we maximise ourselves
-            in our inclusive teams, Flipkart is able to deliver the best imaginable value for
+            in our inclusive teams, EasyFarm is able to deliver the best imaginable value for
             our customers!
             </p>
             <div class="buttonclass">
