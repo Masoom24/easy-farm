@@ -6,13 +6,12 @@ import slider3 from '../../asset/Icons/sliderImages/slider3.jpg';
 
 const Sliders = () => {
     return (
-        <section>
-
-            <div>
+        <section className='flex justify-center'>
+            <div className='w-3/4'>
                 <Carousel>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider1}
                             alt="First slide"
                         />
@@ -23,7 +22,7 @@ const Sliders = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider2}
                             alt="First slide"
 
@@ -35,7 +34,7 @@ const Sliders = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider3}
                             alt="First slide"
 
