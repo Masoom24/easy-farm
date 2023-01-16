@@ -12,7 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("./bg7.png");
+    /*background: url("./bg7.png");*/
+    background-color:#797D7F;
 
 }
 

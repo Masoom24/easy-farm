@@ -3,13 +3,26 @@ import TextField from '@mui/material/TextField';
 import React from 'react';
 import Container from '@mui/material/Container';
 
+
+
+
+
 function AddProduct() {
 
     const divStyles = {
-        boxShadow: '1px 2px 5px #1A237E',
+        boxShadow: '1px 3px 5px #1C2833',
         margin: '2em',
         padding: '1em',
-    };
+        background:'#797D7F',
+
+    };//#DDCDCA
+    const divStyles1 = {
+        boxShadow: '1px 3px 5px #1C2833',
+        margin: '2em',
+        padding: '1em',
+        background:'#D0D3D4',
+
+    };//#F2F3F4
 
     return (
 
@@ -17,39 +30,43 @@ function AddProduct() {
         <div style={divStyles} >
             <Container maxWidth="sm" >
 
-                <h1 style={{ color: '#2ccce4' }} className="text-3xl font-bold">
+                <h1 style={{ color: 'black' }} className="text-3xl font-bold">
                     <center>ADD PRODUCT</center>
                 </h1>
 
-                <div style={divStyles}>
-                    <label style={{ color: '#2ccce4' }}>Enter product name</label>
-                    <TextField variant="filled" size='small' placeholder="Product Name" fullWidth>
+                <div style={divStyles1}>
+                    <label style={{ color: 'black' }}>Enter product name</label>
+                    <TextField variant="filled" size='small' placeholder="NAME" fullWidth>
                     </TextField><br />
                 </div>
 
-                <div style={divStyles}>
-                    <label style={{ color: '#2ccce4' }}>Enter product image</label>
-                    <TextField type="file" variant="filled" size='small' placeholder='Upload images' fullWidth>
+                <div style={divStyles1}>
+                    <label style={{ color: 'black' }}>Enter product image</label>
+                    <TextField type="file" variant="filled" size='small' placeholder='IMAGE' fullWidth>
                     </TextField>
 
                 </div>
-                <div style={divStyles}>
-                    <label style={{ color: '#2ccce4' }}>Enter product price</label>
-                    <TextField variant="filled" size='small' placeholder="Price of the product" fullWidth>
+                <div style={divStyles1}>
+                    <label style={{ color: 'black' }}>Enter product price</label>
+                    <TextField variant="filled" size='small' placeholder="PRICE" fullWidth>
                     </TextField>
                 </div>
 
                 <div>
                 </div>
-                <div style={divStyles}>
-                    <label style={{ color: '#2ccce4' }}>Enter product description</label>
-                    <TextField variant="filled" size='small' placeholder="Description of the product" fullWidth>
+                <div style={divStyles1}>
+                    <label style={{ color: 'black' }}>Enter product description</label>
+                    <TextField variant="filled" size='small' placeholder="DESCRIPTION" fullWidth>
                     </TextField>
                 </div>
 
-                <div className='flex justify-center items-center'>
-                    <Button className="flex justify-center items-center bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md">
-                        add product
+                <div style={{
+                     display: "flex",
+                     justifyContent: "center",
+                     alignItems: "center"
+                     }}>
+                    <Button class="bg-gradient-to-r from-black to gray-400 hover:from-gray-500 hover:to-black text-white font-semibold px-6 py-3 rounded-md mr-6">
+                        <center>add product</center>
                     </Button>
                 </div>
 
