@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-
-const signup = () => {
+import { register } from '../../modules/reducer/authReducer';
+import { useDispatch } from 'react-redux';
+const Signup = () => {
     const divStyles = {
         boxShadow: '1px 2px 5px #1A237E',
         padding: '1em',
@@ -17,13 +18,24 @@ const signup = () => {
         padding: '1em',        
         alignItems: 'center',
     };
+    const dispatch = useDispatch();
+    const clickedButton = (e) =>{
+        e.preventDefault();
+        const data = {
+            name:'anshul',
+            email: 'anshulpa@gmail.com',
+            password : '1234567A90',
+            role: "seller"
+        }
+        dispatch(register({data}));
+    } 
     return (
         <div>
             <div style={divStyles}>
-                    <form>
+                    <form onSubmit={clickedButton}>
                         <div className="container">
                             <h2 style={{ color: '#2ccce4' }} className="text-3xl font-bold">Sign-up</h2>
-                            <div >
+                            <div>
                                 <input type="text" placeholder="Name" style={formFields} />
                             </div>
                             <div >
@@ -33,7 +45,7 @@ const signup = () => {
                                 <input type="password" placeholder="Password" style={formFields} />
                             </div>
                             <div>
-                                <button className="btn" class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Signup</button>
+                                <button type="submit" className="btn" class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Signup</button>
                             </div >
                             <div style={{ color: '#2ccce4' }} className="text-3xs"> <br/>
                                 Already a member? <Link to='/login'>Login</Link> here                     
@@ -45,4 +57,4 @@ const signup = () => {
     )
 }
 
-export default signup
+export default Signup
