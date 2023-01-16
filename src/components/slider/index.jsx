@@ -6,45 +6,37 @@ import slider3 from '../../asset/Icons/sliderImages/slider3.jpg';
 
 const Sliders = () => {
     return (
-        <section>
-
-            <div>
+        <section className='flex justify-center'>
+            <div className='w-3/4'>
                 <Carousel>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider1}
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Keep Ordering...</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider2}
                             alt="First slide"
-
                         />
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>We are reachable at many places</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block rounded-xl"
                             src={slider3}
                             alt="First slide"
-
                         />
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+                            <h3>visit <span className='text-white'><a href="www.easyfarm.in" className='no-underline text-white'>www.easyfarm.in</a></span></h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
