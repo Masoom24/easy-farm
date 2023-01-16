@@ -1,7 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { login } from '../../modules/reducer/authReducer';
 const Login = () => {
+
+    const dispatch = useDispatch();
+    const clickedLogin = (e) =>{
+        e.preventDefault();
+        const data = {
+            email: 'anshulpa@gmail.com',
+            password : '1234567A90',
+        }
+        dispatch(login({data}));
+    }
+
     const divStyles = {
         boxShadow: '1px 2px 5px #1A237E',
         margin: 'auto',
@@ -19,7 +31,7 @@ const Login = () => {
     return (
         <div>
             <div style={divStyles}>
-                <form>
+                <form onSubmit={clickedLogin}>
                     <div className="container">
                         <h2 style={{ color: '#2ccce4' }} className="text-3xl font-bold">Login</h2>
                         <div >
@@ -29,7 +41,7 @@ const Login = () => {
                             <input type="password" placeholder="Password" style={formFields} />
                         </div>
                         <div>
-                            <button className="btn" class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Login</button>
+                            <button className="btn" type='submit' class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Login</button>
                         </div >
                         <div style={{ color: '#2ccce4' }} className="text-3xs"> <br />
                             Not a member? <Link to='/signup'>Sign-up </Link> here
