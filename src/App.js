@@ -11,8 +11,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
 import AboutUs from './pages/aboutus/index';
+import { useDispatch } from 'react-redux';
+import { authSuccess } from './modules/reducer/authReducer';
 
 function App() {
+  const dispatch = useDispatch();
+
+  const user = localStorage.getItem('userData');
+  if (user) {
+    const loggedInUser = JSON.parse(user);
+    dispatch(authSuccess(loggedInUser));
+  }
+
   return (
     <div>
       <Router>
@@ -26,7 +36,7 @@ function App() {
           </Route>
           <Route exact path='/ViewProducts'><PrivateRoute><ViewProducts /></PrivateRoute></Route>
           <Route exact path='/AddProduct'><PrivateRoute><AddProduct /></PrivateRoute></Route>
-          
+
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
