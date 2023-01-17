@@ -1,70 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllProduct } from '../../modules/reducer/productReducer';
+import { productData, isProductsLoading, totalPage } from '../../modules/selectors/product';
+
 const ViewProducts = () => {
-    const data = [
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        },
-        {
-            productName: "Sample",
-            productImage: "sampleImage",
-            productPrice: "productPrice",
-            productDescription: "productDescription"
-        }
-    ]
+    const dispatch = useDispatch();
+    const allProductData = useSelector(productData);
+    const totalPages = useSelector(totalPage);
+    const isLoading = useSelector(isProductsLoading);
     const [currPage, setCurrPage] = useState(1);
+    useEffect(() => {
+        dispatch(getAllProduct({ pageNo: currPage }))
+    }, [currPage])
     const nextPage = () => {
         setCurrPage(currPage + 1)
     }
@@ -92,10 +41,10 @@ const ViewProducts = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((value, index) => (
+                        {isLoading ? <h1>Loading...</h1> : allProductData.map((value, index) => (
                             <tr>
-                                <td className='border border-slate-600'>{index + 1+((currPage-1)*10)}</td>
-                                <td className='border border-slate-600'>{value.productImage}</td>
+                                <td className='border border-slate-600'>{index + 1 + ((currPage - 1) * 10)}</td>
+                                <td className='border border-slate-600'><img className='h-8' src={value.productImage} alt="Product Image" /></td>
                                 <td className='border border-slate-600'>{value.productName}</td>
                                 <td className='border border-slate-600'>{value.productPrice}</td>
                                 <td className='border border-slate-600'>{value.productDescription}</td>
@@ -112,7 +61,7 @@ const ViewProducts = () => {
             <button onClick={nextPage}>Next</button> */}
 
             <Button disabled={currPage <= 1} onClick={prePage} variant="contained">Previous</Button>{currPage}
-            <Button onClick={nextPage} variant="contained">Next</Button>
+            <Button onClick={nextPage} disabled={currPage <= totalPages} variant="contained">Next</Button>
             {/* onClick={()=>nextPage()} */}
 
         </>

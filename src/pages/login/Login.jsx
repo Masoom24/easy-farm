@@ -51,10 +51,10 @@ const Login = () => {
                     <div className="container">
                         <h2 style={{ color: '#2ccce4' }} className="text-3xl font-bold">Login</h2>
                         <div >
-                            <input onChange={handleInputChange} name='email' type="email" placeholder="Email" style={formFields} />
+                            <input onChange={handleInputChange} value={loginData.email} name='email' type="email" placeholder="Email" style={formFields} />
                         </div>
                         <div >
-                            <input onChange={handleInputChange} name='password' type="password" placeholder="Password" style={formFields} />
+                            <input onChange={handleInputChange} value={loginData.password} name='password' type="password" placeholder="Password" style={formFields} />
                         </div>
                         <div>
                             <button className="btn" type='submit' class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Login</button>
