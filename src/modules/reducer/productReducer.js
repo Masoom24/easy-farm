@@ -59,6 +59,31 @@ export const getAllProduct = createAsyncThunk('product/getAll', async ({pageNo},
         return rejectWithValue(err);
     }
 });
+
+export const deleteProduct = createAsyncThunk('product/delete', async ({id}, rejectWithValue) => {
+    try{
+        const res = await axios.delete(`https://major-backend.vercel.app/v1/products/${id}`,{
+            headers : {
+                Authorization: "Bearer "+token,
+            }
+        });
+        toast.success('Product deleted', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        return id ;
+    }catch(err){
+        return rejectWithValue(err);
+    }
+});
+
+
 const productSlice = createSlice({
     name: 'product',
     initialState,
@@ -80,6 +105,10 @@ const productSlice = createSlice({
             .addCase(getAllProduct.rejected, (state, {payload}) => {
                 state = initialState;
             })
+            .addCase(deleteProduct.fulfilled, (state, {payload}) =>{
+                state.productData = state.productData.filter(({id}) => id !== payload)
+            })
+            
     }
 })
 export default productSlice.reducer;
