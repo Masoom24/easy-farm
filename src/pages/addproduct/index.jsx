@@ -14,6 +14,8 @@ function AddProduct() {
         margin: '2em',
         padding: '1em',
         background:'#797D7F',
+        
+        
 
     };//#DDCDCA
     const divStyles1 = {
@@ -26,7 +28,7 @@ function AddProduct() {
 
     return (
 
-
+        <div style={{color:"#D0D3D4"}}>
         <div style={divStyles} >
             <Container maxWidth="sm" >
 
@@ -72,7 +74,7 @@ function AddProduct() {
 
             </Container>
         </div>
-  
+        </div>
   
   );
 

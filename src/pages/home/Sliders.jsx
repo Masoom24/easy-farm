@@ -1,50 +1,50 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import slider1 from './Images/slider1.jpg';
-import slider2 from './Images/slider2.jpg';
-import slider3 from './Images/slider3.jpg';
+//import slider1 from './Images/slider1.jpg';
+//import slider2 from './Images/slider2.jpg';
+//import slider3 from './Images/slider3.jpg';
+
+import p5 from './Images/p5.jpg';
+import p2 from './Images/p2.jpg';
+import p3 from './Images/p3.jpg';
+
 
 const Sliders = () => {
     return (
-        <section>
-
-            <div>
+        <section className='flex justify-center'>
+            <div className='w-3/4'>
                 <Carousel>
                     <Carousel.Item>
+                        <a href={""}>
                         <img
-                            className="d-block w-100"
-                            src={slider1}
+                            className="d-block rounded-xl"
+                            src={p5}
                             alt="First slide"
-                        />
+                        /></a>
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Keep Ordering...</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
+                        <a href={""}>
                         <img
-                            className="d-block w-100"
-                            src={slider2}
+                            className="d-block rounded-xl"
+                            src={p2}
                             alt="First slide"
-
-                        />
+                        /></a>
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>We are reachable at many places</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
+                        <a href={""}>
                         <img
-                            className="d-block w-100"
-                            src={slider3}
+                            className="d-block rounded-xl"
+                            src={p3}
                             alt="First slide"
-
-                        />
+                        /></a>
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+                            <h3>visit <span className='text-white'><a href="www.easyfarm.in" className='no-underline text-white'>www.easyfarm.in</a></span></h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
