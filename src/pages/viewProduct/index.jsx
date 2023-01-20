@@ -56,7 +56,7 @@ const ViewProducts = () => {
                                 <td className='border border-slate-600'>{value.productName}</td>
                                 <td className='border border-slate-600'>{value.productPrice}</td>
                                 <td className='border border-slate-600'>{value.productDescription}</td>
-                                <td className='border border-slate-600'><button className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Edit</button></td>
+                                <td className='border border-slate-600'><button onClick={() => history.push(`/addProduct/${value.id}`)} className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Edit</button></td>
                                 <td className='border border-slate-600'><button onClick={() => handleDeleteProduct(value.id)} className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Delete</button></td>
                             </tr>))}
                     </tbody>

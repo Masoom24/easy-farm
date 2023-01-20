@@ -2,9 +2,18 @@ import React from "react";
 import "./contactstyle.css"
 
  const ContactUs = () =>{
+  const divStyles = {
+    boxShadow: '1px 3px 5px #1C2833',
+    margin: '2em',
+    padding: '1em',
+    background:'#797D7F',
+    
+    
+
+};
   return (
   
-    <div className="container1">
+    <div style={divStyles}className="container1">
       
       <form>
         <h1><center>----------CONTACT US----------</center></h1>
