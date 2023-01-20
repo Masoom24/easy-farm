@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import api from "../../api/api";
 import { toast } from 'react-toastify'
 const initialState = {
     isLoading: false,
@@ -13,7 +13,7 @@ const user = localStorage.getItem('userData');
 const token = JSON.parse(user).tokens.access.token;
 export const addProduct = createAsyncThunk('product/addProduct', async ({ data }, rejectWithValue) => {
     try {
-        const res = await axios.post('https://major-backend.vercel.app/v1/products', data, {
+        const res = await api.post('products', data, {
             headers: {
                 Authorization: "Bearer " + token,
             }
@@ -45,11 +45,11 @@ export const addProduct = createAsyncThunk('product/addProduct', async ({ data }
         console.log(err)
         return rejectWithValue(err);
     }
-})
+});
 
 export const getAllProduct = createAsyncThunk('product/getAll', async ({pageNo},rejectWithValue) => {
     try {
-        const res = await axios.get(`https://major-backend.vercel.app/v1/products?page=${pageNo}`, {
+        const res = await api.get(`products?page=${pageNo}`, {
             headers: {
                 Authorization: "Bearer " + token,
             }
@@ -62,7 +62,7 @@ export const getAllProduct = createAsyncThunk('product/getAll', async ({pageNo},
 
 export const deleteProduct = createAsyncThunk('product/delete', async ({id}, rejectWithValue) => {
     try{
-        const res = await axios.delete(`https://major-backend.vercel.app/v1/products/${id}`,{
+        const res = await api.delete(`products/${id}`,{
             headers : {
                 Authorization: "Bearer "+token,
             }
