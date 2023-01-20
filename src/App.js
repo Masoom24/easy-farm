@@ -41,11 +41,15 @@ function App() {
           </Route>
           <Route exact path='/ViewProducts'><PrivateRoute><ViewProducts /></PrivateRoute></Route>
           <Route exact path='/AddProduct'><PrivateRoute><AddProduct /></PrivateRoute></Route>
+          <Route exact path='/AddProduct/:id'><PrivateRoute><AddProduct /></PrivateRoute></Route>
 
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
           <Route exact path='/aboutus'><AboutUs /></Route>
+          <Route exact path='/cookiespolicy'><CookiesPolicy /></Route>
+          <Route exact path='/privacypolicy'><PrivacyPolicy /></Route>
+          <Route exact path='/termsandconditions'><TermsAndConditions /></Route>
           <Route exact path='/*'><NotFound /></Route>
         </Switch>
         <Footer />
