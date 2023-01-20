@@ -5,18 +5,21 @@ import Container from '@mui/material/Container';
 import { addProduct } from '../../modules/reducer/productReducer';
 import { useDispatch } from 'react-redux';
 
-const divStyles = {
-    boxShadow: '1px 3px 5px #1C2833',
-    margin: '2em',
-    padding: '1em',
-    background: '#797D7F',
 
-};//#DDCDCA
-const divStyles1 = {
-    boxShadow: '1px 3px 5px #1C2833',
-    margin: '2em',
-    padding: '1em',
-    background: '#D0D3D4',
+    const divStyles = {
+        boxShadow: '1px 3px 5px #1C2833',
+        margin: '2em',
+        padding: '1em',
+        background:'#797D7F',
+        
+        
+
+    };//#DDCDCA
+    const divStyles1 = {
+        boxShadow: '1px 3px 5px #1C2833',
+        margin: '2em',
+        padding: '1em',
+        background:'#D0D3D4',
 
 };//#F2F3F4
 
@@ -57,6 +60,8 @@ function AddProduct() {
         dispatch(addProduct({ data: productData }));
     }
     return (
+
+        <div style={{color:"#D0D3D4"}}>
         <div style={divStyles} >
             <Container maxWidth="sm" >
                 <h1 style={{ color: 'black' }} className="text-3xl font-bold">
@@ -101,6 +106,9 @@ function AddProduct() {
 
             </Container>
         </div>
-    );
+        </div>
+  
+  );
+
 }
 export default AddProduct;

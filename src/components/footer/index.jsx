@@ -6,6 +6,8 @@ import {
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 import logo from '../../asset/Icons/Logos/png/ColorLogo.png'
+//import logo from '../../asset/Icons/Logos/png/White logo - no background.png';
+
 // const divStyles = {
 //   color: "black",
 //   backgroundColor: "#282c32",
@@ -31,9 +33,9 @@ const Footer = () => {
           <div className='flex gap-[150px]'>
             <div className='flex'>
               <ul className='flex flex-col justify-start hover:cursor-pointer'>
-                <li className='py-1 text-sm'>About Us</li>
-                <li className='py-1 text-sm'>Contact Us</li>
-                <li className='py-1 text-sm'>Privacy Policy</li>
+               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/aboutus'}>About Us</a></li>
+               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/contactus'}>Contact Us</a></li>
+               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/privacypolicy'}>Privacy Policy</a></li>
 
               </ul>
 
@@ -42,8 +44,8 @@ const Footer = () => {
             <div className='flex hover:cursor-pointer'>
               <ul>
                 <li className='py-1 text-sm'>Events</li>
-                <li className='py-1 text-sm'>Terms& condition</li>
-                <li className='py-1 text-sm'>Cookies Policy</li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/TermsAndConditions'}>Terms& condition</a></li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/cookiespolicy'}>Cookies Policy</a></li>
               </ul>
             </div>
             <div className="flex flex-end justify-between md:w-[10%] my-4 ">
