@@ -14,7 +14,6 @@ import CookiesPolicy from './pages/cookiespolicy'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
-import AboutUs from './pages/aboutus/index';
 import { useDispatch } from 'react-redux';
 import { authSuccess } from './modules/reducer/authReducer';
 
