@@ -99,19 +99,19 @@ function AddProduct() {
                     </h1>
 
                     <div style={divStyles1}>
-                        <label style={{ color: 'black' }}>Enter product name</label>
+                        <label style={{ color: 'black' }}>Product Name</label>
                         <TextField name='productName' onChange={handleInputChange} value={productData.productName} variant="filled" size='small' placeholder="NAME" fullWidth>
                         </TextField><br />
                     </div>
 
                     <div style={divStyles1}>
-                        <label style={{ color: 'black' }}>Enter product image</label>
+                        <label style={{ color: 'black' }}>Insert Image</label>
                         <TextField name='productImage' onChange={handleInputChange} type="file" variant="filled" size='small' placeholder='IMAGE' fullWidth>
                         </TextField>
                         {productData.productImage.length ? <img src={productData.productImage} alt="product image" /> : null}
                     </div>
                     <div style={divStyles1}>
-                        <label style={{ color: 'black' }}>Enter product price</label>
+                        <label style={{ color: 'black' }}>Price</label>
                         <TextField name='productPrice' onChange={handleInputChange} variant="filled" value={productData.productPrice} size='small' placeholder="PRICE" fullWidth>
                         </TextField>
                     </div>
@@ -119,7 +119,7 @@ function AddProduct() {
                     <div>
                     </div>
                     <div style={divStyles1}>
-                        <label style={{ color: 'black' }}>Enter product description</label>
+                        <label style={{ color: 'black' }}>Product Description</label>
                         <TextField name='productDescription' onChange={handleInputChange} variant="filled" size='small' value={productData.productDescription} placeholder="DESCRIPTION" fullWidth>
                         </TextField>
                     </div>
