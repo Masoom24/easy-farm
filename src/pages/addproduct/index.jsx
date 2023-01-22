@@ -5,22 +5,23 @@ import Container from '@mui/material/Container';
 import { addProduct, getProductById, updateProduct } from '../../modules/reducer/productReducer';
 import { useDispatch } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
-
+import '../addproduct/mainCSS.css'
 
 const divStyles = {
+    display : 'flex',
+    alignItems : 'center',
+    justifyContent : 'center',
     boxShadow: '1px 3px 5px #1C2833',
-    margin: '2em',
     padding: '1em',
     background: '#797D7F',
-
-
-
 };//#DDCDCA
 const divStyles1 = {
     boxShadow: '1px 3px 5px #1C2833',
     margin: '2em',
     padding: '1em',
     background: '#D0D3D4',
+    borderRadius: '12px',
+    paddingBottom : '16px'
 
 };//#F2F3F4
 
@@ -92,8 +93,8 @@ function AddProduct() {
     return (
 
         <div style={{ color: "#D0D3D4" }}>
-            <div style={divStyles} >
-                <Container maxWidth="sm" >
+            <div style={divStyles}>
+                <Container maxWidth="sm" className='mainContainer'>
                     <h1 style={{ color: 'black' }} className="text-3xl font-bold">
                         <center>ADD PRODUCT</center>
                     </h1>
@@ -127,7 +128,8 @@ function AddProduct() {
                     <div style={{
                         display: "flex",
                         justifyContent: "center",
-                        alignItems: "center"
+                        alignItems: "center",
+                        marginBottom : '10px',
                     }}>
                         {
                             id ?
