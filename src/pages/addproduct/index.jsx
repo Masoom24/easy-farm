@@ -8,9 +8,9 @@ import { useParams, useHistory } from 'react-router-dom';
 import '../addproduct/mainCSS.css'
 
 const divStyles = {
-    display : 'flex',
-    alignItems : 'center',
-    justifyContent : 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     boxShadow: '1px 3px 5px #1C2833',
     padding: '1em',
     background: '#797D7F',
@@ -21,7 +21,7 @@ const divStyles1 = {
     padding: '1em',
     background: '#D0D3D4',
     borderRadius: '12px',
-    paddingBottom : '16px'
+    paddingBottom: '16px'
 
 };//#F2F3F4
 
@@ -83,9 +83,9 @@ function AddProduct() {
         dispatch(addProduct({ data: productData }));
     }
 
-    const handleUpdateProduct = async() => {
-        const res = await dispatch(updateProduct({data : productData, id}))
-        if(res.type === 'product/addProduct/fulfilled'){
+    const handleUpdateProduct = async () => {
+        const res = await dispatch(updateProduct({ data: productData, id }))
+        if (res.type === 'product/addProduct/fulfilled') {
             history.push('/ViewProducts')
         }
     }
@@ -129,7 +129,7 @@ function AddProduct() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        marginBottom : '10px',
+                        marginBottom: '10px',
                     }}>
                         {
                             id ?
