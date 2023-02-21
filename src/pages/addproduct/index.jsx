@@ -13,7 +13,7 @@ const divStyles = {
     justifyContent: 'center',
     boxShadow: '1px 3px 5px #1C2833',
     padding: '1em',
-    background: '#797D7F',
+    // background: '#797D7F',
 };//#DDCDCA
 const divStyles1 = {
     boxShadow: '1px 3px 5px #1C2833',
@@ -106,7 +106,7 @@ function AddProduct() {
                     </div>
 
                     <div style={divStyles1}>
-                        <label style={{ color: 'black' }}>Insert Image</label>
+                        <label style={{ color: 'black' }}>Upload Image</label>
                         <TextField name='productImage' onChange={handleInputChange} type="file" variant="filled" size='small' placeholder='IMAGE' fullWidth>
                         </TextField>
                         {productData.productImage.length ? <img src={productData.productImage} alt="product image" /> : null}
@@ -133,10 +133,10 @@ function AddProduct() {
                     }}>
                         {
                             id ?
-                                <Button onClick={handleUpdateProduct} className="bg-gradient-to-r from-black to gray-400 hover:from-gray-500 hover:to-black text-white font-semibold px-6 py-3 rounded-md mr-6">
+                                <Button onClick={handleUpdateProduct} className="bg-gradient-to-r from-black to gray-600 hover:from-gray-800 hover:to-black text-white font-semibold px-6 py-3 rounded-md mr-6">
                                     <center>update product</center>
                                 </Button> :
-                                <Button onClick={handleAddNewProduct} className="bg-gradient-to-r from-black to gray-400 hover:from-gray-500 hover:to-black text-white font-semibold px-6 py-3 rounded-md mr-6">
+                                <Button onClick={handleAddNewProduct} className="bg-gradient-to-r from-black to gray-600 hover:from-gray-800 hover:to-black text-white font-semibold px-6 py-3 rounded-md mr-6">
                                     <center>add product</center>
                                 </Button>
                         }
