@@ -13,10 +13,10 @@ import "./contactstyle.css"
 };
   return (
   
-    <div style={divStyles}className="container1">
+    <div style={{backgroundColor:"white"}}className="container1">
       
-      <form>
-        <h1><center>----------CONTACT US----------</center></h1>
+      <form style={divStyles}>
+        <h1 style={{color:"white"}}><center>----------CONTACT US----------</center></h1>
         <br /><br /><br />
         <input type="text" id="firstName" placeholder="First Name" required />
         <input type="text" id="lastName" placeholder="Last Name" required />
