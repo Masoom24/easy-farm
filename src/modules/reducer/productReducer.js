@@ -10,7 +10,7 @@ const initialState = {
     totalResults: 0
 }
 const user = localStorage.getItem('userData');
-const token = JSON.parse(user).tokens.access.token;
+const token = JSON.parse(user)?.tokens?.access?.token;
 export const addProduct = createAsyncThunk('product/addProduct', async ({ data }, rejectWithValue) => {
     try {
         const res = await api.post('products', data, {
