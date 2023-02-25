@@ -42,7 +42,6 @@ function App() {
           <Route exact path='/ViewProducts'><PrivateRoute><ViewProducts /></PrivateRoute></Route>
           <Route exact path='/AddProduct'><PrivateRoute><AddProduct /></PrivateRoute></Route>
           <Route exact path='/AddProduct/:id'><PrivateRoute><AddProduct /></PrivateRoute></Route>
-
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
