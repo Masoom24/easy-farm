@@ -1,10 +1,10 @@
 const TermsAndConditions = () => {
 
     const divStyles = {
-        boxShadow: '1px 3px 5px #1C2833',
+        // boxShadow: '1px 3px 5px #1C2833',
         margin: '2em',
         padding: '1em',
-        background:'#797D7F',
+        background:'white',
         
     };
     return (
