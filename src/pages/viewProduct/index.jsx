@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProduct, deleteProduct } from '../../modules/reducer/productReducer';
 import { productData, isProductsLoading, totalPage } from '../../modules/selectors/product';
 import { useHistory } from 'react-router-dom';
-
+import "./prod.css"
 const ViewProducts = () => {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -34,45 +34,45 @@ const ViewProducts = () => {
             <div>
                 <div className='flex justify-center my-2'><button onClick={() => history.push('/addProduct')} className='flex p-1 px-2 my-2 text-white bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>+ Add Product</button></div>
             </div>
-            <div className='flex justify-center my-5'>
+            <div  className="container123">
                 {
-                    allProductData.length ? <table className='table-auto border-collapes border border-slate-500'>
-                    <thead>
-                        <tr>
-                            <th className='border border-slate-600'>Sr Number</th>
-                            <th className='border border-slate-600'>Product Image</th>
-                            <th className='border border-slate-600'>Product Name</th>
-                            <th className='border border-slate-600'>Price</th>
-                            <th className='border border-slate-600'>Producr Description</th>
-                            <th className='border border-slate-600'>Edit</th>
-                            <th className='border border-slate-600'>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {isLoading ? <h1>Loading...</h1> : allProductData.map((value, index) => (
-                            <tr key={value.id}>
-                                <td className='border border-slate-600'>{index + 1 + ((currPage - 1) * 10)}</td>
-                                <td className='border border-slate-600'><img className='h-8' src={value.productImage} alt="Product Image" /></td>
-                                <td className='border border-slate-600'>{value.productName}</td>
-                                <td className='border border-slate-600'>{value.productPrice}</td>
-                                <td className='border border-slate-600'>{value.productDescription}</td>
-                                <td className='border border-slate-600'><button onClick={() => history.push(`/addProduct/${value.id}`)} className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Edit</button></td>
-                                <td className='border border-slate-600'><button onClick={() => handleDeleteProduct(value.id)} className='flex p-1 px-2 text-white m-1 bg-blue-500 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 '>Delete</button></td>
-                            </tr>))}
-                    </tbody>
+                   
+                   
+                        allProductData.map((value, index) => {
+                           return(
+                                <div className='border border-slate-600'><center>{index + 1 + ((currPage - 1) * 10)}</center>
+                                <div className="card_item">
+                                    <div className="card_inner">
+                                        <img className='h-8' src={value.productImage} alt="Product Image"  />
+                                        <div className="prodName">{value.productName}</div>
+                                        <div className="prodDesc">{value.productDescription}</div>
+                                       
+                                        <div className="detail-box">
+    
+                                            <div className="gitDetail"><span>{value.productPrice}</span></div>
+                                           
+                                        </div>
+                                        <button className="editButton">Edit</button>
+                                        <button onClick={() => handleDeleteProduct(value.id)} className="editButton">Delete</button>
+                                        
+                                    </div>
+    
+                                </div></div>
+                           )
+                        })
 
-                </table>: <h3>No Product Found</h3>
+              
                 }
             </div>
 
 
             {/* <button disabled={true} onClick={prePage}>Previous</button>{currPage}
             <button onClick={nextPage}>Next</button> */}
-
+            
             <Button disabled={currPage <= 1} onClick={prePage} variant="contained">Previous</Button>{currPage}
             <Button onClick={nextPage} disabled={currPage >= totalPages} variant="contained">Next</Button>
             {/* onClick={()=>nextPage()} */}
-
+            
         </>
     )
 }
