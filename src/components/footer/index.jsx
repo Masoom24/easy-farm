@@ -1,22 +1,29 @@
+import React, { useRef } from 'react';
 import {
   FaTwitterSquare,
   FaFacebookSquare,
   FaInstagram,
 } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 import logo from '../../asset/Icons/Logos/png/ColorLogo.png'
 //import logo from '../../asset/Icons/Logos/png/White logo - no background.png';
 
-// const divStyles = {
-//   color: "black",
-//   backgroundColor: "#282c32",
-//   padding: "10px",
-//   fontFamily: "Sans-Serif"
-// };
 
 
 const Footer = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_FOOTER_TEMPLATE_ID, form.current, process.env.REACT_APP_CONTACTUS_PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
   return (
 
 
@@ -33,9 +40,9 @@ const Footer = () => {
           <div className='flex gap-[150px]'>
             <div className='flex'>
               <ul className='flex flex-col justify-start hover:cursor-pointer'>
-               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/aboutus'}>About Us</a></li>
-               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/contactus'}>Contact Us</a></li>
-               <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/privacypolicy'}>Privacy Policy</a></li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/aboutus'}>About Us</a></li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/contactus'}>Contact Us</a></li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/privacypolicy'}>Privacy Policy</a></li>
 
               </ul>
 
@@ -57,10 +64,12 @@ const Footer = () => {
               <div className='mb-6 '>
                 <h4>Feel free to subscribe. We won't send spams!!</h4><br />
                 <div className='flex items-center '>
-                  <input placeholder="Your Email here..." className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" name="email" id="footerEmail" />
-                  <Button variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "white", borderRadius: "12px", color: "black" }}>
-                    Subscribe
-                  </Button>
+                  <form ref={form} onSubmit={sendEmail}>
+                    <input placeholder="Your Email here..." name='userEmailFooter' className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" id="footerEmail" />
+                    <Button type='submit' variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "white", borderRadius: "12px", color: "black" }}>
+                      Subscribe
+                    </Button>
+                  </form>
                 </div>
               </div>
 
