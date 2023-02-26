@@ -16,7 +16,7 @@ const Sliders = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>Keep Ordering...</h3>
+                            <h3 className='text-black'>Keep Ordering...</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -36,7 +36,7 @@ const Sliders = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>visit <span className='text-white'><a href="www.easyfarm.in" className='no-underline text-white'>www.easyfarm.in</a></span></h3>
+                            <h3>visit <span className='text-black'><a href="www.easyfarm.in" className='no-underline text-black '>www.easyfarm.in</a></span></h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

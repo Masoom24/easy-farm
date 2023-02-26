@@ -9,12 +9,6 @@ const initialState = {
     },
     value: 0
 }
-// const data = {
-//     name:'anshul',
-//     email: 'anshul@gmail.com',
-//     password : '123456',
-
-// }
 
 export const register = createAsyncThunk('auth/register', async ({ data }, rejectWithValue) => {
 
@@ -83,12 +77,6 @@ const authSlice = createSlice({
     }
 });
 
-// {
-//     reducer : afeg,
-//     actions: {
-//         increment : ksuuhfh
-//     }
-// }
 //!  Exporting ACTIONS
 export const { authSuccess } = authSlice.actions;
 

@@ -10,7 +10,7 @@ const initialState = {
     totalResults: 0
 }
 const user = localStorage.getItem('userData');
-const token = JSON.parse(user).tokens.access.token;
+const token = JSON.parse(user)?.tokens?.access?.token;
 export const addProduct = createAsyncThunk('product/addProduct', async ({ data }, rejectWithValue) => {
     try {
         const res = await api.post('products', data, {
@@ -47,9 +47,58 @@ export const addProduct = createAsyncThunk('product/addProduct', async ({ data }
     }
 });
 
+export const updateProduct = createAsyncThunk('product/addProduct', async ({ data , id}, rejectWithValue) => {
+    try {
+        const res = await api.patch(`products/${id}`, data, {
+            headers: {
+                Authorization: "Bearer " + token,
+            }
+        });
+        toast.success('Product Updated', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        console.log(res.data)
+        return res.data;
+
+    } catch (err) {
+        toast.error(err.response.data.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        console.log(err)
+        return rejectWithValue(err);
+    }
+});
+
 export const getAllProduct = createAsyncThunk('product/getAll', async ({pageNo},rejectWithValue) => {
     try {
         const res = await api.get(`products?page=${pageNo}`, {
+            headers: {
+                Authorization: "Bearer " + token,
+            }
+        })
+        return res.data;
+    } catch (err) {
+        return rejectWithValue(err);
+    }
+});
+
+export const getProductById = createAsyncThunk('product/getById', async ({id},rejectWithValue) => {
+    try {
+        const res = await api.get(`products/${id}`, {
             headers: {
                 Authorization: "Bearer " + token,
             }

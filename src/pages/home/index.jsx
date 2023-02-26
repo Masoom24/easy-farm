@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <>
-      <div style={{background:"#797D7F" ,padding:'3em'}}>
+      <div style={{background:"white" ,padding:'3em'}}>
         <div className="min-h-screen flex flex-col  text-black">
           <main className="container mx-auto px-6 pt-16 flex-1 text-center">
             <h2 style={{ color: "#000051" }} className="text-2xl md:text-4xl lg:text-6xl uppercase">Welcome to</h2>
