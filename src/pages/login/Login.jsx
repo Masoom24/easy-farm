@@ -13,12 +13,6 @@ const Login = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        // setLoginData((pre)=>{
-        //     return {
-        //         ...pre,
-        //         [name] : value
-        //     }
-        // })
         setLoginData((pre) => ({
             ...pre,
             [name]: value
