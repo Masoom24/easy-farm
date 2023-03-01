@@ -4,16 +4,10 @@ import profile from '../../asset/Icons/profile.gif';
 import logo from '../../asset/Icons/Logos/png/ColorLogo.png';
 //import logo from '../../asset/Icons/Logos/png/White logo - no background.png';
 import addToBasket from '../../asset/Icons/addToBasket.gif'
+import logoutButtonStatic from '../../asset/Icons/logoutButtonStatic.png'
 
 const Header = () => {
-
-    // const footerStyles = {
-
-    //     color: "white",
-    //     backgroundColor: "#282c32",
-    //     fontFamily: "Sans-Serif"
-    //   };
-
+    
     return (
         <>
 
@@ -30,6 +24,7 @@ const Header = () => {
                 </div>
                 <div className='flex justify-center items-center'><Link to='/addProduct'><img src={addToBasket} className='w-16 drop-shado-lg' alt="logo" /></Link></div>
                 <div className='flex justify-center items-center'><Link to='/profile'><img src={profile} className='w-16 drop-shado-lg' alt="logo" /></Link></div>
+                <div className='flex justify-center items-center'><Link to='/profile'><img src={logoutButtonStatic} className='w-16 drop-shado-lg' alt="logo" /></Link></div>
             </div>
 
         </>

@@ -65,7 +65,7 @@ const Footer = () => {
                 <h4>Feel free to subscribe. We won't send spams!!</h4><br />
                 <div className='flex items-center '>
                   <form ref={form} onSubmit={sendEmail}>
-                    <input placeholder="Your Email here..." name='userEmailFooter' className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" id="footerEmail" />
+                    <input required placeholder="Your Email here..." name='userEmailFooter' className='px-1 py-1 focus:outline-0 drop-shadow-lg text-black outline-none border-2 border-yellow-500 rounded-xl mx-2 bg-white' type="email" id="footerEmail" />
                     <Button type='submit' variant="contained" endIcon={<SendIcon />} style={{ backgroundColor: "white", borderRadius: "12px", color: "black" }}>
                       Subscribe
                     </Button>

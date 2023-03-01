@@ -16,8 +16,7 @@ import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
 import { useDispatch } from 'react-redux';
 import { authSuccess } from './modules/reducer/authReducer';
-
-
+import LandingPage from './pages/landPage/index';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,7 +32,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path='/'><div>This is the main landing page!!</div></Route>
+          <Route exact path='/'><LandingPage /></Route>
           <Route exact path='/home'>
             <PrivateRoute>
               <Home />
