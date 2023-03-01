@@ -20,7 +20,7 @@ const Landing = () => {
           <p className="primary-text">
            We Provide A place for Buyers and Sellers to find tools related to agriculture!
           </p>
-          <button className="secondary-button"><Link className='no-underline' to='/home' >Get Started</Link>
+          <button className="secondary-button"><Link className='no-underline text-white' to='/home' >Get Started</Link>
              {""}
           </button>
         </div>

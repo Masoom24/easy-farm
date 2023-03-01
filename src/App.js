@@ -8,7 +8,6 @@ import Signup from './pages/login/Signup'
 import AddProduct from './pages/addproduct';
 import ContactUs from './pages/contactus'
 import AboutUs from './pages/aboutus'
-import Landing from './pages/landPage'
 import PrivacyPolicy from './pages/privacypolicy'
 import TermsAndConditions from './pages/terms_and_condition'
 import CookiesPolicy from './pages/cookiespolicy'
@@ -17,8 +16,7 @@ import AuthRoute from './routes/AuthRoute';
 import PrivateRoute from './routes/PrivateRoute';
 import { useDispatch } from 'react-redux';
 import { authSuccess } from './modules/reducer/authReducer';
-
-
+import LandingPage from './pages/landPage/index';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +32,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path='/'><div>This is the main landing page!!</div></Route>
+          <Route exact path='/'><LandingPage /></Route>
           <Route exact path='/home'>
             <PrivateRoute>
               <Home />
@@ -43,7 +41,6 @@ function App() {
           <Route exact path='/ViewProducts'><PrivateRoute><ViewProducts /></PrivateRoute></Route>
           <Route exact path='/AddProduct'><PrivateRoute><AddProduct /></PrivateRoute></Route>
           <Route exact path='/AddProduct/:id'><PrivateRoute><AddProduct /></PrivateRoute></Route>
-          <Route exact path='/Landing'><PrivateRoute><Landing /></PrivateRoute></Route>
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
