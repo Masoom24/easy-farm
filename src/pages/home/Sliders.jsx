@@ -6,9 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import p5 from '../../asset/Icons/sliderImages/p5.jpg';
 //import p2 from '../../asset/Icons/sliderImages/p2.jpg';
 //import p3 from '../../asset/Icons/sliderImages/p3.jpg';
-import p5 from './Images/p5.jpg';
-import p2 from './Images/p2.jpg';
-import p3 from './Images/p3.jpg';
+// import p5 from './Images/p5.jpg';
+// import p2 from './Images/p2.jpg';
+// import p3 from './Images/p3.jpg';
+import s1 from './Images/SliderImg1.png';
+import s2 from './Images/SliderImg2.png';
+import s3 from './Images/SliderImg3.png';
+import s4 from './Images/SliderImg4.png';
 
 
 const Sliders = () => {
@@ -20,34 +24,33 @@ const Sliders = () => {
                         <a href={""}>
                         <img
                             className="d-block rounded-xl"
-                            src={p5}
+                            src={s1}
                             alt="First slide"
                         /></a>
-                        <Carousel.Caption>
-                            <h3>Keep Ordering...</h3>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <a href={""}>
                         <img
                             className="d-block rounded-xl"
-                            src={p2}
-                            alt="First slide"
+                            src={s2}
+                            alt="Second slide"
                         /></a>
-                        <Carousel.Caption>
-                            <h3>We are reachable at many places</h3>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <a href={""}>
                         <img
                             className="d-block rounded-xl"
-                            src={p3}
-                            alt="First slide"
+                            src={s3}
+                            alt="Third slide"
                         /></a>
-                        <Carousel.Caption>
-                            <h3>visit <span className='text-white'><a href="www.easyfarm.in" className='no-underline text-white'>www.easyfarm.in</a></span></h3>
-                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <a href={""}>
+                        <img
+                            className="d-block rounded-xl"
+                            src={s4}
+                            alt="Fourth slide"
+                        /></a>
                     </Carousel.Item>
                 </Carousel>
             </div>
