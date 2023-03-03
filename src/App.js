@@ -9,8 +9,8 @@ import AddProduct from './pages/addproduct';
 import ContactUs from './pages/contactus'
 import AboutUs from './pages/aboutus'
 import PrivacyPolicy from './pages/privacypolicy'
-import ReturnPolicy from './pages/return_policy'
-import TermsAndConditions from './pages/terms_and_condition'
+import ReturnPolicy from './pages/returnpolicy'
+import TermsAndConditions from './pages/terms_and_conditions'
 import CookiesPolicy from './pages/cookiespolicy'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthRoute from './routes/AuthRoute';
