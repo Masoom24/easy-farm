@@ -50,7 +50,7 @@ const Footer = () => {
 
             <div className='flex hover:cursor-pointer'>
               <ul>
-                <li className='py-1 text-sm'>Events</li>
+                <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/ReturnPolicy'}>Return Policy</a></li>
                 <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/TermsAndConditions'}>Terms& condition</a></li>
                 <li className='py-1 text-sm'><a style={{ textDecoration: 'none' }} href={'/cookiespolicy'}>Cookies Policy</a></li>
               </ul>
