@@ -9,6 +9,7 @@ import AddProduct from './pages/addproduct';
 import ContactUs from './pages/contactus'
 import AboutUs from './pages/aboutus'
 import PrivacyPolicy from './pages/privacypolicy'
+import ReturnPolicy from './pages/return_policy'
 import TermsAndConditions from './pages/terms_and_condition'
 import CookiesPolicy from './pages/cookiespolicy'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -47,6 +48,7 @@ function App() {
           <Route exact path='/aboutus'><AboutUs /></Route>
           <Route exact path='/cookiespolicy'><CookiesPolicy /></Route>
           <Route exact path='/privacypolicy'><PrivacyPolicy /></Route>
+          <Route exact path='/ReturnPolicy'><ReturnPolicy /></Route>
           <Route exact path='/termsandconditions'><TermsAndConditions /></Route>
           <Route exact path='/*'><NotFound /></Route>
         </Switch>
