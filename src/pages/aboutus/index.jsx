@@ -15,7 +15,7 @@ const AboutUs = () =>{
             our customers!
             </p>
             <div class="buttonclass">
-                <button>Contact Us</button>
+                <button><a style={{ textDecoration: 'none' }} href={'/contactus'}>Contact Us</a></button>
             </div>
         </div>
     </div>
