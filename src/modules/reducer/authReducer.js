@@ -33,7 +33,14 @@ export const login = createAsyncThunk('auth/login', async ({ data }, rejectWithV
     }
 })
 
-
+export const logout = createAsyncThunk('auth/logout', async ({ data }, rejectWithValue) => {
+    try{
+        const res = await axios.post('https://major-backend.vercel.app/v1/auth/logout', data);
+        localStorage.clear();
+    }catch(err){
+        return rejectWithValue(err);
+    }
+})
 
 const authSlice = createSlice({
     name: 'auth',
