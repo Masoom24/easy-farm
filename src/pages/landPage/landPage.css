@@ -11,6 +11,7 @@
     z-index: -2;
     max-width: 700px;
     left: 195px;
+    
   }
   .home-bannerImage-container1 {
     position: absolute;
@@ -19,16 +20,13 @@
     z-index: -2;
     max-width: 700px;
     left: 700px;
-    
-    
+
   }
   .home-image-section {
     max-width: 550px;
     flex: 1;
     padding-bottom: 1rem;
     padding-right: 1rem;
-    
-
   }
   
   .home-text-section {
