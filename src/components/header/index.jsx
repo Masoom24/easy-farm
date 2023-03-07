@@ -29,7 +29,6 @@ const Header = () => {
                     <div><li className='list-none drop-shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300 rounded-xl p-2'><Link className='no-underline' to='/aboutUs'>About us</Link></li></div>
                 </div>
                 <div className='flex py-5 text-black'>
-                    <input type="search" name="" id="" className='border-2 bg-transparent h-8 cursor-pointer text-blue-500 border-yellow-500 px-2 py-1 my-2 focus:outline-0 rounded-2xl drop-shadow-lg ' placeholder='Search Items' />
                 </div>
                 <div className='flex justify-center items-center'><Link to='/addProduct'><img src={addToBasket} className='w-16 drop-shado-lg' alt="logo" /></Link></div>
                 {/* <div className='flex justify-center items-center'><Link to='/profile'><img src={profile} className='w-16 drop-shado-lg' alt="logo" /></Link></div> */}
