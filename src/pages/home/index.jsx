@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Sliders from "./Sliders";
 import Button from '@mui/material/Button'
 import { Link } from 'react-router-dom';
+import Card_Home from "./card_home";
 export const Colors = styled.div`
     background : linear-gradient(
         to left,
@@ -38,7 +39,7 @@ const Home = () => {
             <div>
             </div>
           </main>
-        </div>
+        </div><Card_Home />
       </div>
     </>
   )
