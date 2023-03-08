@@ -32,7 +32,7 @@
     animation: ease-in;
     margin: 0 auto;
     position:absolute;
-    top: 168%;
+    top: 155%;
     left: 36.2%;  
 } 
 .card-container1-home:hover{
@@ -54,7 +54,7 @@
     animation: ease-in;
     margin: 0 auto;
     position:absolute;
-    top: 168%;
+    top: 155%;
     left: 67%; 
 }
 .card-container2-home:hover{
