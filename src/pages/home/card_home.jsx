@@ -11,9 +11,6 @@ function Card_Home() {
             <img src={card1} alt="" />
         </div>
         <div className="card-content-home">
-            <div className="card-title-home">
-                <h3></h3>
-            </div>
             <div className="card-body">
                 <p>Explore More</p>
             </div>
