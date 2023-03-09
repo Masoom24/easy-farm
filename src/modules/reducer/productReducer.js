@@ -133,8 +133,7 @@ export const deleteProduct = createAsyncThunk('product/delete', async ({id}, rej
 });
 
 export const logoutUser = () =>{
-    localStorage.clear();
-    console.log(user);
+    localStorage.clear()
 }
 
 
