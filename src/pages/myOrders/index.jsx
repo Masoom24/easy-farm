@@ -1,3 +1,10 @@
+import React from 'react';
+import "./myorders.css";
+import CardOrders from "./cardOrders";
+import o1 from "./o1.png"
+import o2 from "./o2.png"
+import o3 from "./o3.png"
+import o4 from "./o4.png"
 function MyOrders() {
     return (
       <div className="viewcontainerO">
