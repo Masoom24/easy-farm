@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Login from './pages/login/Login'
 import Signup from './pages/login/Signup'
 import AddProduct from './pages/addproduct';
+import MyOrders from './pages/myOrders'
 import ContactUs from './pages/contactus'
 import AboutUs from './pages/aboutus'
 import PrivacyPolicy from './pages/privacypolicy'
@@ -46,6 +47,7 @@ function App() {
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
           <Route exact path='/aboutus'><AboutUs /></Route>
+          <Route exact path='/MyOrders'><PrivateRoute><MyOrders /></PrivateRoute></Route>
           <Route exact path='/cookiespolicy'><CookiesPolicy /></Route>
           <Route exact path='/privacypolicy'><PrivacyPolicy /></Route>
           <Route exact path='/ReturnPolicy'><ReturnPolicy /></Route>
