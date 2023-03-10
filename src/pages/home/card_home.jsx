@@ -32,6 +32,14 @@ function Card_Home() {
                     </div>
                 </div>
             </div>
+            <div className="card-container-home">
+                <div className="image-container2-home">
+                    <img src={card3} alt="" />
+                    <div className="card-body">
+                    
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
