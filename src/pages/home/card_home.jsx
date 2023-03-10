@@ -12,7 +12,7 @@ function Card_Home() {
                 </div>
                 <div className="card-content-home">
                     <div className="card-body">
-                        <p>Explore More</p>
+                    <button><a style={{ textDecoration: 'none' }} href={'/ViewProducts'}>Explore More</a></button>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@ function Card_Home() {
                 <div className="image-container1-home">
                     <img src={card2} alt="" />
                     <div className="card-body">
-                        <p>Explore More</p>
+                    <button><a style={{ textDecoration: 'none' }} href={'/ViewProducts'}>Explore More</a></button>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ function Card_Home() {
                 <div className="image-container2-home">
                     <img src={card3} alt="" />
                     <div className="card-body">
-                        <p>Explore More </p>
+                    <button><a style={{ textDecoration: 'none' }} href={'/ViewProducts'}>Explore More</a></button>
                     </div>
                 </div>
             </div>
