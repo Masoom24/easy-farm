@@ -9,6 +9,7 @@ import AddProduct from './pages/addproduct';
 import MyOrders from './pages/myOrders'
 import ContactUs from './pages/contactus'
 import AboutUs from './pages/aboutus'
+import View from './pages/view'
 import PrivacyPolicy from './pages/privacypolicy'
 import ReturnPolicy from './pages/returnpolicy'
 import TermsAndConditions from './pages/terms_and_condition'
@@ -46,6 +47,7 @@ function App() {
           <Route exact path='/signup'><AuthRoute><Signup /></AuthRoute></Route>
           <Route exact path='/login'><AuthRoute><Login /></AuthRoute></Route>
           <Route exact path='/contactus'><ContactUs /></Route>
+          <Route exact path='/view'><PrivateRoute><View /></PrivateRoute></Route>
           <Route exact path='/aboutus'><AboutUs /></Route>
           <Route exact path='/MyOrders'><PrivateRoute><MyOrders /></PrivateRoute></Route>
           <Route exact path='/cookiespolicy'><CookiesPolicy /></Route>
