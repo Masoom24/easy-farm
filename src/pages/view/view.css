@@ -66,23 +66,10 @@
     height: 350px;
   }
   
-  .warpper .heart {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
-    width: 25px;
-    height: 25px;
-    color: #000000;
-  }
-  .warpper .heart svg, .warpper .heart path, .warpper .heart circle {
-    stroke: currentColor;
-    fill: transparent;
-  }
   
-  .warpper .heart:hover {
-    cursor: pointer;
-  }
+ 
+  
+ 
   
   .color_bg {
     display: block;
