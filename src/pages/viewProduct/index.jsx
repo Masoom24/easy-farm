@@ -52,7 +52,7 @@ const ViewProducts = () => {
                                             <div className="gitDetail"><span>{value.productPrice}</span></div>
                                            
                                         </div>
-                                        <button className="editButton">Edit</button>
+                                        <button onClick={() => history.push(`/addProduct/${value.id}`)} className="editButton">Edit</button>
                                         <button onClick={() => handleDeleteProduct(value.id)} className="editButton">Delete</button>
                                         
                                     </div>
