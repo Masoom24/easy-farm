@@ -1,3 +1,10 @@
+import React from 'react';
+import "./view.css";
+import CardView from "./cardView";
+import v1 from "./v1.png"
+import v5 from "./v5.png"
+import v3 from "./v3.png"
+import v4 from "./v4.png"
 function View() {
     return (
         <div className="viewcontainer">
