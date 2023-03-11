@@ -1,0 +1,77 @@
+.viewcontainer {
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+  .cardV {
+    width: 310px;
+    
+  }
+  
+  .buyButton {
+    margin: 10px auto;
+    width: 100px;
+    height: 35px;
+    background: hsl(245, 44%, 65%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 10px hsl(225, 100%, 94%);
+  }
+  .warpperV {
+    margin: 60px 10px 10px;
+    padding-top: 250px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    border-Width: 1px;
+    border-color: #c0bdbd;
+    -webkit-box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.2);
+            box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.2);
+    -webkit-transition: ease all .3s;
+    transition: ease all .3s;
+    
+  }
+  
+  .warpperV:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  
+  .warpperV:hover .card_img {
+    height: 350px;
+  }
+  
+  .warpper .heart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    color: #000000;
+  }
