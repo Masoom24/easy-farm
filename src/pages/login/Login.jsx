@@ -32,7 +32,8 @@ const Login = () => {
         boxShadow: '1px 2px 5px #1A237E',
         margin: 'auto',
         padding: '1em',
-        height: '400px',
+        // height: '400px',
+        height: '500px',
         width: '500px',
         marginTop: 25,
         textAlign: 'center'
@@ -43,12 +44,12 @@ const Login = () => {
         padding: '1em',
     };
     const socialLogin = {
-        margin: '0.5em',
+        margin: '2em',
         width: '90%',
-        align:'center',
-        textAlign:'center',
+        // align:'center + !important',
+        // textAlign:'center + !important'
         // padding: '0.5em'
-    }
+    };
     return (
         <div>
             <div style={divStyles}>
@@ -69,7 +70,6 @@ const Login = () => {
                         </div>
                             {/* <p className="text-3xs font-bold" style={{ color: '#6c757d' }} >--------------------------OR                        --------------------------
                         </p> */}
-
                         <div style={socialLogin} >
                         <LoginSocialGoogle
                             client_id={"740475747942-qeobrtkln333lscnuc3smasib7ktauok.apps.googleusercontent.com"}
@@ -82,8 +82,12 @@ const Login = () => {
                             onReject={(err) => {
                                 console.log(err);
                             }}                        >
+                                <div>
                             <GoogleLoginButton />
+                                </div>
+                                <div style={{marginTop: '1em'}}>
                             <FacebookLoginButton />
+                                </div>
                         </LoginSocialGoogle>
                         </div>
                     </div>
