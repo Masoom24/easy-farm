@@ -10,6 +10,9 @@ const initialState = {
     value: 0
 }
 
+const user = localStorage.getItem('userData');
+const token = JSON.parse(user)?.tokens?.refresh?.token;
+
 export const register = createAsyncThunk('auth/register', async ({ data }, rejectWithValue) => {
 
     try {
@@ -33,9 +36,8 @@ export const login = createAsyncThunk('auth/login', async ({ data }, rejectWithV
     }
 })
 
-export const logout = createAsyncThunk('auth/logout', async ({ data }, rejectWithValue) => {
+export const logout = createAsyncThunk('auth/logout', async ({}, rejectWithValue) => {
     try{
-        const res = await axios.post('https://major-backend.vercel.app/v1/auth/logout', data);
         localStorage.clear();
     }catch(err){
         return rejectWithValue(err);
@@ -77,6 +79,11 @@ const authSlice = createSlice({
                 state.userData = payload;
             })
             .addCase(login.rejected, (state, { payload }) => {
+                state.isAuth = false;
+                state.isLoading = false;
+                state.userData = initialState.userData;
+            })
+            .addCase(logout.fulfilled, (state, { payload }) => {
                 state.isAuth = false;
                 state.isLoading = false;
                 state.userData = initialState.userData;
