@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify'
 
 const initialState = {
     isLoading: false,
@@ -19,8 +20,28 @@ export const register = createAsyncThunk('auth/register', async ({ data }, rejec
         const res = await axios.post('https://major-backend.vercel.app/v1/auth/register', data);
         console.log(res.data);
         localStorage.setItem('userData', JSON.stringify(res.data));
+        toast.success('Register Successful', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         return res.data;
     } catch (err) {
+        toast.error(err.response.data.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         return rejectWithValue(err);
     }
 });
@@ -30,8 +51,28 @@ export const login = createAsyncThunk('auth/login', async ({ data }, rejectWithV
         const res = await axios.post('https://major-backend.vercel.app/v1/auth/login', data);
         console.log(res.data);
         localStorage.setItem('userData', JSON.stringify(res.data));
+        toast.success('Login Successful', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         return res.data;
     } catch (err) {
+        toast.error(err.response.data.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         return rejectWithValue(err);
     }
 })
@@ -39,7 +80,27 @@ export const login = createAsyncThunk('auth/login', async ({ data }, rejectWithV
 export const logout = createAsyncThunk('auth/logout', async ({}, rejectWithValue) => {
     try{
         localStorage.clear();
+        toast.success('Logout Successful', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }catch(err){
+        toast.error(err.response.data.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         return rejectWithValue(err);
     }
 })
@@ -52,7 +113,7 @@ const authSlice = createSlice({
             ...state,
             isLoading: false,
             isAuth: true,
-            user: payload.user
+            userData: payload
         })
     },
     extraReducers: (builder) => {
