@@ -1,3 +1,11 @@
+import React from 'react';
+import "./rentpage.css";
+import Rent_Card from "./rent_card";
+//import I1 from "./I1.png"
+import p7 from "./p7.png"
+import p5 from "./p5.png"
+import p6 from "./p6.png"
+import p4 from "./p4.png"
 function Rentproduct() {
     return (
       <div className="viewcontainerR">

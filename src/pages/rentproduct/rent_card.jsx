@@ -1,5 +1,5 @@
 import React from 'react'
-import I1 from "./I1.png"
+//import I1 from "./I1.png"
 import { Link } from 'react-router-dom';
 
 export default function Rent_Card(props) {
