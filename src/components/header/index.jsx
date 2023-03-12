@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import logo from '../../asset/Icons/Logos/png/ColorLogo.png';
 import addToBasket from '../../asset/Icons/addToBasket.gif'
 import { Button } from '@mui/material';
-import { logoutUser } from '../../modules/reducer/productReducer';
+import { logout } from '../../modules/reducer/authReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { isUserAuth } from '../../modules/selectors/auth';
 
 const Header = () => {
-
+    const isAuth = useSelector(isUserAuth);
+    const dispatch = useDispatch();
+    const logoutUser = () => {
+        dispatch(logout({}));
+    }
     
     return (
         <>
@@ -22,7 +28,7 @@ const Header = () => {
                 <div className='flex py-5 text-black'>
                 </div>
                 <div className='flex justify-center items-center'><Link to='/addProduct'><img src={addToBasket} className='w-16 drop-shado-lg' alt="logo" /></Link></div>
-                <div className='flex justify-center items-center'><li className='list-none drop-shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300 rounded-xl'><Link to="/" className='no-underline'><Button onClick={logoutUser}>Logout</Button></Link></li></div>
+                { isAuth && <div className='flex justify-center items-center'><li className='list-none drop-shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300 rounded-xl'><Link to="/" className='no-underline'><Button onClick={logoutUser}>Logout</Button></Link></li></div> }
             </div>
 
         </>
