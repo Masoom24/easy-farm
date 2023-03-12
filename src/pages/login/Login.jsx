@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../modules/reducer/authReducer';
 import { GoogleLoginButton } from "react-social-login-buttons";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import { LoginSocialGoogle } from "reactjs-social-login";
+
 const Login = () => {
 
     const dispatch = useDispatch();
@@ -24,7 +26,7 @@ const Login = () => {
 
     const clickedLogin = (e) => {
         e.preventDefault();
-        dispatch(login({ data : loginData }));
+        dispatch(login({ data: loginData }));
     }
     const divStyles = {
         boxShadow: '1px 2px 5px #1A237E',
@@ -40,6 +42,13 @@ const Login = () => {
         margin: '1em',
         padding: '1em',
     };
+    const socialLogin = {
+        margin: '0.5em',
+        width: '90%',
+        align:'center',
+        textAlign:'center',
+        // padding: '0.5em'
+    }
     return (
         <div>
             <div style={divStyles}>
@@ -57,6 +66,25 @@ const Login = () => {
                         </div >
                         <div style={{ color: '#2ccce4' }} className="text-3xs"> <br />
                             Not a member? <Link to='/signup'>Sign-up </Link> here
+                        </div>
+                            {/* <p className="text-3xs font-bold" style={{ color: '#6c757d' }} >--------------------------OR                        --------------------------
+                        </p> */}
+
+                        <div style={socialLogin} >
+                        <LoginSocialGoogle
+                            client_id={"740475747942-qeobrtkln333lscnuc3smasib7ktauok.apps.googleusercontent.com"}
+                            scope="openid profile email"
+                            discoveryDocs="claims_supported"
+                            access_type="offline"
+                            onResolve={({ provider, data }) => {
+                                console.log(provider, data);
+                            }}
+                            onReject={(err) => {
+                                console.log(err);
+                            }}                        >
+                            <GoogleLoginButton />
+                            <FacebookLoginButton />
+                        </LoginSocialGoogle>
                         </div>
                     </div>
                 </form>
