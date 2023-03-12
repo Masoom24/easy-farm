@@ -41,6 +41,7 @@ function Card_Home() {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };
