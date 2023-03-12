@@ -13,7 +13,9 @@ export const Colors = styled.div`
     )
 `
 const Home = () => {
-
+/*<Link to='/signup'> <Button class="bg-gradient-to-r from-black to gray-400 hover:from-gray-500 hover:to-black text-white font-semibold px-20 py-3 rounded-md mr-6">
+                <center>Register</center>
+              </Button></Link>*/
 
   return (
     <>
@@ -27,9 +29,7 @@ const Home = () => {
              <br />
             <Sliders /><br />
             <div>
-              <Link to='/signup'> <Button class="bg-gradient-to-r from-black to gray-400 hover:from-gray-500 hover:to-black text-white font-semibold px-20 py-3 rounded-md mr-6">
-                <center>Register</center>
-              </Button></Link>
+              
               <div style={{ fontSize: 15, color: 'white' }}>
                 <p>Once You Register You're Agreeing to Our Privacy Policy!</p>
               </div>
