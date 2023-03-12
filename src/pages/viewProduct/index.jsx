@@ -38,28 +38,26 @@ const ViewProducts = () => {
                 {
                    
                    
-                        allProductData.map((value, index) => {
-                           return(
-                                <div className='border border-slate-600'><center>{index + 1 + ((currPage - 1) * 10)}</center>
-                                <div className="card_item">
-                                    <div className="card_inner">
-                                        <img className='h-8' src={value.productImage} alt="Product Image"  />
-                                        <div className="prodName">{value.productName}</div>
-                                        <div className="prodDesc">{value.productDescription}</div>
-                                       
-                                        <div className="detail-box">
-    
-                                            <div className="gitDetail"><span>{value.productPrice}</span></div>
-                                           
-                                        </div>
-                                        <button onClick={() => history.push(`/addProduct/${value.id}`)} className="editButton">Edit</button>
-                                        <button onClick={() => handleDeleteProduct(value.id)} className="editButton">Delete</button>
-                                        
-                                    </div>
-    
-                                </div></div>
-                           )
-                        })
+                       allProductData.length ? (allProductData.map((value, index) => {
+                        return(
+                             <div className='border border-slate-600'><center>{index + 1 + ((currPage - 1) * 10)}</center>
+                             <div className="card_item">
+                                 <div className="card_inner">
+                                     <img className='h-8' src={value.productImage} alt="Product Image"  />
+                                     <div className="prodName">{value.productName}</div>
+                                     <div className="prodDesc">{value.productDescription}</div>
+                                    
+                                     <div className="detail-box">
+                                         <div className="gitDetail"><span>{value.productPrice}</span></div>                                       
+                                     </div>
+                                     <button onClick={() => history.push(`/addProduct/${value.id}`)} className="editButton">Edit</button>
+                                     <button onClick={() => handleDeleteProduct(value.id)} className="editButton">Delete</button>
+                                     
+                                 </div>
+ 
+                             </div></div>
+                        )
+                     })) : "No product found"
 
               
                 }
