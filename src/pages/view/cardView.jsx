@@ -19,7 +19,7 @@ export default function CardView(props) {
                           
                            <p className="price newPrice">{rupess}{Price}</p>
                           
-                       </div> <button className="buyButton">BUY</button>
+                       </div> <button className="buyButton"><Link className='no-underline text-white' to="/cart">BUY</Link></button>
                        <div className="cart">
                        <svg className="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                        <Link to='/cart'>

@@ -19,7 +19,7 @@ export default function Rent_Card(props) {
                            
                             <p className="Rprice newPrice">{rupess}{Price}</p>
                         </div>
-                        <button className="rentButton">Rent</button>
+                        <button className="rentButton"><Link className='no-underline text-white' to="/cart">RENT</Link></button>
                         <div className="Rcart">
                         <svg className="RoutCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                         <Link to='/cart'>

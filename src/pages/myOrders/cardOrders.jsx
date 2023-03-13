@@ -18,8 +18,8 @@ export default function CardOrders(props) {
 
                     <div className="actionO">
                          
-                        <button className="buyButton">RENT</button>
-                        <button className="buyButton">BUY</button>
+                        <button className="buyButton"><Link className='no-underline text-white' to="/cart">RENT</Link></button>
+                        <button className="buyButton"><Link className='no-underline text-white' to="/cart">BUY</Link></button>
                         <div className="cart">
                         <svg className="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                         <Link to='/cart'>
