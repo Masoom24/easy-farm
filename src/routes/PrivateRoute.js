@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {
     const isAuth = useSelector(isUserAuth);
+    
     return isAuth ? children : <Redirect to='/login' /> ;
 }
 

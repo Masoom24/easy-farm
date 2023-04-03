@@ -96,6 +96,19 @@ export const getAllProduct = createAsyncThunk('product/getAll', async ({pageNo},
     }
 });
 
+export const getAllProductForRent = createAsyncThunk('product/getAllForRent', async ({},rejectWithValue) => {
+    try {
+        const res = await api.get(`products?limit=1000`, {
+            headers: {
+                Authorization: "Bearer " + token,
+            }
+        })
+        return res.data;
+    } catch (err) {
+        return rejectWithValue(err);
+    }
+});
+
 export const getProductById = createAsyncThunk('product/getById', async ({id},rejectWithValue) => {
     try {
         const res = await api.get(`products/${id}`, {
@@ -132,11 +145,6 @@ export const deleteProduct = createAsyncThunk('product/delete', async ({id}, rej
     }
 });
 
-export const logoutUser = () =>{
-    localStorage.clear()
-}
-
-
 const productSlice = createSlice({
     name: 'product',
     initialState,
@@ -156,6 +164,20 @@ const productSlice = createSlice({
                 state.totalResults = payload.totalResults;
             })
             .addCase(getAllProduct.rejected, (state, {payload}) => {
+                state = initialState;
+            })
+        .addCase(getAllProductForRent.pending, (state) => {
+            state.isLoading = true;
+        })
+            .addCase(getAllProductForRent.fulfilled, (state, { payload }) => {
+                state.isLoading = false;
+                state.productData = payload.results;
+                state.page = payload.page;
+                state.limit = payload.limit;
+                state.totalPages = payload.totalPages;
+                state.totalResults = payload.totalResults;
+            })
+            .addCase(getAllProductForRent.rejected, (state, {payload}) => {
                 state = initialState;
             })
             .addCase(deleteProduct.fulfilled, (state, {payload}) =>{

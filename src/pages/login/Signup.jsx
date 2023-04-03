@@ -24,7 +24,7 @@ const Signup = () => {
         email:"",
         password:"",
         name:"",
-        role:"seller"
+        role:""
     })
 
     const handleChange = (e) => {
@@ -37,12 +37,6 @@ const Signup = () => {
 
     const clickedButton = (e) =>{
         e.preventDefault();
-        // const data = {
-        //     name:'anshul',
-        //     email: 'anshulpa@gmail.com',
-        //     password : '1234567A90',
-        //     role: "seller"
-        // }
         dispatch(register({data:userData}));
     } 
     return (
@@ -59,6 +53,13 @@ const Signup = () => {
                             </div>
                             <div >
                                 <input value={userData.password} name="password" onChange={handleChange} type="password" placeholder="Password" style={formFields} />
+                            </div>
+                            <div >
+                                <select onChange={handleChange} name="role" placeholder='Role' id="">
+                                    <option value="farmer">Please Select The Role</option>
+                                    <option value="farmer">Farmer</option>
+                                    <option value="seller">Seller</option>
+                                </select>
                             </div>
                             <div>
                                 <button type="submit" className="btn" class="bg-gradient-to-r from-purple-400 to cyan-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" >Signup</button>
