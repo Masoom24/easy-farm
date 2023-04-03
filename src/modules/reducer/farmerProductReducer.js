@@ -5,7 +5,7 @@ const initialState = {
     isLoading: false,
     productData: [],
     page: 1,
-    limit: 10,
+    limit: 1000,
     totalPages: 1,
     totalResults: 0
 }
