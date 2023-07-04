@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../api/api";
-import { toast } from 'react-toastify'
 const initialState = {
     isLoading: false,
     productData: [],
