@@ -1,14 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import slider1 from './Images/slider1.jpg';
-//import slider2 from './Images/slider2.jpg';
-//import slider3 from './Images/slider3.jpg';
-//import p5 from '../../asset/Icons/sliderImages/p5.jpg';
-//import p2 from '../../asset/Icons/sliderImages/p2.jpg';
-//import p3 from '../../asset/Icons/sliderImages/p3.jpg';
-// import p5 from './Images/p5.jpg';
-// import p2 from './Images/p2.jpg';
-// import p3 from './Images/p3.jpg';
 import s1 from './Images/SliderImg1.png';
 import s2 from './Images/SliderImg2.png';
 import s3 from './Images/SliderImg3.png';
