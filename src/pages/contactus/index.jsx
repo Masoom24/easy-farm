@@ -8,9 +8,6 @@ const ContactUs = () => {
     margin: '2em',
     padding: '1em',
     background: '#797D7F',
-
-
-
   };
   
 
